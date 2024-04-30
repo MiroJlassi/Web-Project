@@ -1,0 +1,54 @@
+body{
+    margin: 0px;
+    width: 100%;
+    height: 101vh;
+    overflow-y: hidden;
+    font-family: "Inter", sans-serif;
+    color: white;
+
+    background-image: url(IMG\ 1.jpg);
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+
+a{
+    text-decoration: none;
+    color: white;
+}
+a:active{
+    text-decoration: none;
+
+}
+.nav {
+    width: 100%;
+    height: 70px;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: fixed;
+    top: 0;
+}
+
+.nav div {
+    width: 150px;
+    height: 50px;
+    margin: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.nav div:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+

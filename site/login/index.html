@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="nav">
+      <img
+        src="logo.png"
+        alt=""
+        style="width: 70px; position: fixed; left: 290px"
+      />
+      <!--<div>
+        <a href="./About us/index.html" style="display: block">ABOUT US</a>
+      </div> -->
+
+      <div style="width: 540px">
+        Croissant Rouge Tunisien Comité Local Manouba
+      </div>
+      <a href="../index.html"><div>HOME</div></a>
+      <a href="../Events/Events.html"><div>EVENTS</div></a>
+      <a href="../Store/index.html"><div>STORE</div></a>
+      <a href="../About us/index.html"><div>ABOUT US</div></a>
+    </div>
+
+    <div
+      style="
+        background-color: rgba(255, 0, 0, 0.156);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: black;
+        width: 500px;
+        height: 500px;
+        border-radius: 22px;
+      "
+    >
+      <h2>Donation Form</h2>
+
+      <form>
+        <!--text input-->
+        <label for="fname">First Name:</label><br />
+        <input type="text" id="fname" name="firstname" /><br /><br />
+
+        <label for="lname">Last Name:</label><br />
+        <input type="text" id="lname" name="lastname" /><br /><br />
+        <!--Radio btns-->
+        <input
+          type="radio"
+          id="TUNISIAN"
+          name="donation_type"
+          value="TUNISIAN"
+        />
+        <label for="TUNISIAN">TUNISIAN</label><br />
+        <input
+          type="radio"
+          id="FOREIGNER"
+          name="donation_type"
+          value="FOREIGNER"
+        />
+        <label for="FOREIGNER">FOREIGNER</label><br /><br />
+        <!--Check Box-->
+        <input type="checkbox" id="cloths" name="nationality" value="CLOTHES" />
+        <label for="cloths">CLOTHES</label><br />
+        <input type="checkbox" id="medic" name="nationality" value="MEDIC" />
+        <label for="medic">MEDIC</label><br />
+        <input type="checkbox" id="food" name="nationality" value="FOOD" />
+        <label for="food">FOOD</label><br /><br />
+
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+  </body>
+</html>

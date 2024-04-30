@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    font-family: "Inter", sans-serif;
+    color: white;
+    background-image: url(img\ 2.jpg);
+    background-size: cover;
+    background-position-y: -70%;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+a:active{
+    text-decoration: none;
+
+}
+
+.nav {
+    width: 100%;
+    height: 70px;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: fixed;
+    top: 0;
+}
+
+.nav div {
+    width: 150px;
+    height: 50px;
+    margin: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.nav div:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.content {
+    margin-top: 100px;
+    padding: 50px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:rgba(255, 255, 255, 0.5);
+    border-radius: 22px ;
+}
+
+.event {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 900px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.event img {
+    height: 200px;
+    border-radius: 20px 0 0 20px;
+    margin-right: 20px;
+}
+
+.event-text {
+    flex: 1;
+    padding: 20px;
+}
+
+.donatebtn {
+    background-color: rgba(255, 105, 105, 0.7);
+    width: 150px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+
+.donatebtn:hover {
+    background-color: rgb(255, 53, 53);
+    color: white;
+}
