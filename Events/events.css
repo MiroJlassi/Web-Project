@@ -20,6 +20,7 @@ body {
     align-items: center;
     background-color:rgba(255, 255, 255, 0.5);
     border-radius: 22px ;
+    border: 2px solid black;
 }
 
 .event {
@@ -31,6 +32,7 @@ body {
     border-radius: 20px;
     margin-bottom: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 2px solid black;
 }
 
 .event img {
@@ -59,4 +61,9 @@ body {
 .donatebtn:hover {
     background-color: rgb(255, 53, 53);
     color: white;
+
+}
+
+.event-text h2{
+    color: rgb(27, 26, 26);
 }
