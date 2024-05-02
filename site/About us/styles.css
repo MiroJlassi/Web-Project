@@ -1,0 +1,12 @@
+body{
+    margin: 0;
+    font-family: Inter;
+    background-size:cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: black;
+    background-color: beige;
+
+}

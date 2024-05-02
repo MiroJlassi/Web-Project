@@ -1,117 +1,68 @@
 body{
-    margin: 0px;
-    width: 100%;
-    height: 101vh;
-    /*overflow-y: hidden;*/
-    font-family: "Inter", sans-serif;
-    color: white;
-
-  /*  background-image: url(IMG\ 1.jpg);   */
-    background-size: cover;
-
-
-}
-
-
-a{
-    text-decoration: none;
-    color: white;
-}
-a:active{
-    text-decoration: none;
-
-}
-.nav {
-    width: 100%;
-    height: 70px;
-    background-color: rgba(0, 0, 0, 0.7);
+    margin: 0;
+    font-family: Inter;
+    overflow: hidden;
+    background-size:cover;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
+    color: white;
+}
+
+
+.timer{
     position: fixed;
-    top: 0;
-}
-
-.nav div {
-    width: 150px;
-    height: 50px;
-    margin: 0 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition-duration: 0.5s;
-    cursor: pointer;
-    border-radius: 10px;
-}
-
-.nav div:hover {
-    background-color: rgba(255, 255, 255, 0.5);
-}
-
-
-
-.content{
-    height:90%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-}
-
-.description{
-    height: 100px;
-    width: 400px;
-    margin-left: 100px;
+    bottom: 20%;
+    width: 70%;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center;
     border-radius: 20px;
-    background-color: rgba(255, 255, 255, 0.3);
-    display: flex;
-    text-align: end;
-    flex-direction: column;
-    justify-content: center;
+    box-shadow: 0px 10px 50px black; 
     padding: 10px;
 }
 
 .donatebtn{
-    margin-left: 100px;
-    background-color: rgba(255, 105, 105, 0.3);
-    width: 200px;
+    background-color: rgba(255, 105, 105, 0.5);
+    width: 400px;
     height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
-
     border-radius: 20px;
-
-    transition-duration: 0.8s;
+    transition-duration: 0.5s;
     cursor: pointer;
 
+    position: fixed;
+    bottom: 5%;
 }
 
 .donatebtn:hover{
-    margin-left: 100px;
     background-color: rgb(255, 53, 53);
-    color: rgb(255, 255, 255);
-    width: 200px;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    border-radius: 20px;
-
+    box-shadow: 0px 5px 10px red; 
+    scale: 1.1;
 }
 
+/***************************************************************************************/
 
+#loginIcon {
+    cursor: pointer;
+    height: 40px;
+    width: 50px;
+    border-radius:100% ;
+    display: block;
+    justify-content: center;
+    transition-duration: 0.3s;
+}
 
-
-/*-------------------------------------------------------------------------------------*/
+#loginIcon:hover{
+    scale: 1.1;
+}
 
 .container {
+    z-index: 100;
     max-width: 400px;
     margin: 50px auto;
-    
     padding: 50px;
-    
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.427);
     display: none;
@@ -125,16 +76,6 @@ a:active{
 
 .container.active {
     display: block;
-    
-}
-
-#loginIcon {
-    cursor: pointer;
-    max-width: 100px;
-    margin: 0 auto 20px;
-    margin-top: 10px;
-    display: block;
-    justify-content: center;
 }
 
 #loginForm, #registerForm {
@@ -165,12 +106,10 @@ p {
     margin-top: 15px;
     text-align: center;
 }
-#showRegister {
-    
+#showRegister { 
     color:  rgb(205, 8, 8);
     text-decoration: none;
     margin-top: 15px;
-    
 }
 
 #showRegister:hover {

@@ -1,0 +1,60 @@
+.navbar{
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 70px;
+    color: white;
+    border-bottom: 3px rgba(255, 255, 255, 0.5) solid;
+    box-shadow: 0px 10px 50px black; 
+}
+
+.navbar a{
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 10px;
+    border-radius: 10px;
+
+    transition-duration: 0.3s;
+    
+}
+
+.navbar a:hover{
+    scale: 1.1;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.navigation{
+    padding: 10px;
+}
+
+
+/* SCROLL BAR */
+/* Track */
+::-webkit-scrollbar {
+    width: 8px; /* Set the width of the scrollbar */
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgba(85, 85, 85, 0.794); /* Color of the scrollbar handle on hover */
+
+    /* Color of the scrollbar handle */
+    border-radius: 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #585858;
+}
