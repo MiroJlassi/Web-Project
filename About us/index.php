@@ -104,8 +104,8 @@
           >scan the QR code</span
         >
       </p>
-      <div style="display: flex; justify-content: center">
-        <img
+      <div  style="display: flex; justify-content: center">
+        <img id="QRcode"
           src="Media/fb iq code.png"
           style="
             height: auto;
@@ -209,5 +209,7 @@
       "
       >↑</a
     >
+    <script src="script.js"></script>
   </body>
+
 </html>
