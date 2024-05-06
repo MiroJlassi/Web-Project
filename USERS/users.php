@@ -13,12 +13,7 @@
         echo "CONNECTION FAILED";
     }
 
-    $sql_money = "SELECT SUM(moneyamount) AS total_money FROM donations";
-    $result_money = mysqli_query($conn, $sql_money);
-    $row_money = mysqli_fetch_assoc($result_money);
-    $total_money = $row_money['total_money'];
-
-    $sql_items = "SELECT item, SUM(qte) AS total_quantity FROM donations WHERE qte != 0 GROUP BY item";
+    $sql_items = "SELECT username,email, password FROM users";
     $result_items = mysqli_query($conn, $sql_items);
     mysqli_close($conn);
 ?>
@@ -30,7 +25,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
     <link rel="stylesheet" href="styles.css">
-    <title>Charity Donation Dashboard</title>
+    <title>Dashboard USERS</title>
 </head>
 <body>
 
@@ -47,41 +42,28 @@
 
 
     <div class="main">
-        <h2>Charity Donation Dashboard</h2>
+        <h2>USERS</h2>
 
-        <div>
-            <img src="money.jpg" alt="" style="width: 200px;height:150px; border-radius:100%">
-            <h3>Total Money Gathered: $<?php echo $total_money; ?></h3>
-        </div>
-        
-
-        <div style="width: 100%; height:3px; border-radius: 20px; background-color: gray;"></div>
-        <h3>Donated Items:</h3>
         <table>
             <thead>
                 <tr>
-                    <th>Item</th>
-                    <th>Total Quantity</th>
+                    <th>NAME</th>
+                    <th>EMAIL</th>
+                    <th>PASSWORD</th>
                 </tr>
             </thead>
             <tbody>
                 <?php
                 while ($row = mysqli_fetch_assoc($result_items)) {
                     echo "<tr>";
-                    echo "<td>" . $row['item'] . "</td>";
-                    echo "<td>" . $row['total_quantity'] . "</td>";
+                    echo "<td>" . $row['username'] . "</td>";
+                    echo "<td>" . $row['email'] . "</td>";
+                    echo "<td>" . $row['password'] . "</td>";
                     echo "</tr>";
                 }
                 ?>
             </tbody>
         </table>
-
-
-        <div style="width: 400px; height: 60px">
-            <a href="../DONATE/donate.php">
-                <h1 class="donatebtn">DONATE NOW!</h1>
-            </a>
-        </div>
     </div>
 
 </body>

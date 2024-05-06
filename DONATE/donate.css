@@ -40,17 +40,22 @@ input[type="radio"] {
 }
 
 button[type="submit"] {
-    background-color: #4CAF50;
+    background-color: rgb(255, 0, 0);
     width: 100%;
+    font-size: 100%;
     color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 20px;
     cursor: pointer;
+    box-shadow: 0 10px 10px rgba(255, 0, 0, 0.096);
+    transition-duration: 0.3s;
 }
 
 button[type="submit"]:hover {
-    background-color: #45a049;
+    box-shadow: 0 10px 10px rgba(255, 0, 0, 0.51);
+    scale: 1.01;
+
 }
 
 #error-message {

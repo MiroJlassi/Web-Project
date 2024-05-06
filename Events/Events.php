@@ -24,10 +24,10 @@
       <div style="width: 50%">
         Croissant Rouge Tunisien Comité Local Manouba
       </div>
-      <a href="../index.html"><div class="navigation">HOME</div></a>
+      <a href="../index.php"><div class="navigation">HOME</div></a>
       <a href=""><div class="navigation">EVENTS</div></a>
-      <a href=""><div class="navigation">STORE</div></a>
-      <a href="../ABOUT US/index.html"
+      <a href="../Store/store.php"><div class="navigation">STORE</div></a>
+      <a href="../ABOUT US/index.php"
         ><div class="navigation">ABOUT US</div></a
       >
     </div>

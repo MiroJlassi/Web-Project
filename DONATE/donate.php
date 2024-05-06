@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
 
-    <link href="formstyles.css" rel="stylesheet">
+    <link href="donate.css" rel="stylesheet">
     <title>Charity Donation Form</title>
 </head>
 
@@ -17,12 +17,12 @@
         <img src="../MEDIA/logo.png" alt="" style="height: 80%; border-radius: 100%; margin-right:50px ;">
         <div style="width: 50%;">Croissant Rouge Tunisien Comité Local Manouba</div>
         <a href="../index.php"><div class="navigation">HOME</div></a>
-        <a href="../Events/Events.html"><div class="navigation">EVENTS</div></a>
-        <a href=""><div class="navigation">STORE</div></a>
-        <a href="../ABOUT US/index.html"><div class="navigation">ABOUT US</div></a>
+        <a href="../Events/Events.php"><div class="navigation">EVENTS</div></a>
+        <a href="../Store/store.php"><div class="navigation">STORE</div></a>
+        <a href="../ABOUT US/index.php"><div class="navigation">ABOUT US</div></a>
     </div>
 
-    <form action="db.php" method="post">
+    <form action="base.php" method="post">
         <h2>Charity Donation Form</h2>
         <label for="fname">First Name:</label><br>
         <input type="text" id="fname" name="fname" required><br>
@@ -52,15 +52,15 @@
 
         <div id="money_fields">
             <label for="money_amount">Money Amount:</label><br>
-            <input type="number" id="money_amount" name="money_amount"><br>
+            <input type="number" id="money_amount" name="money_amount" value="0"><br>
         </div>
 
         <div id="item_fields">
             <label for="item_name">Item Name:</label><br>
-            <input type="text" id="item_name" name="item_name"><br>
+            <input type="text" id="item_name" name="item_name" required><br>
 
             <label for="quantity">Quantity:</label><br>
-            <input type="number" id="quantity" name="quantity"><br>
+            <input type="number" id="quantity" name="quantity" required><br>
         </div>
 
         <button type="submit">SUBMIT</button>

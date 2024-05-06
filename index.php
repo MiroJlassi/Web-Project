@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,14 +9,15 @@
 </head>
 
 <body onload="ChangeImage()">
+
     <div class="navbar">
         <link rel="stylesheet" href="PREFAB/navbar.css">
         <img src="MEDIA/logo.png" alt="" style="height: 80%; border-radius: 100%; margin-right:50px ;">
         <div style="width: 50%;">Croissant Rouge Tunisien Comité Local Manouba</div>
         <a href=""><div class="navigation">HOME</div></a>
-        <a href="Events/Events.html"><div class="navigation">EVENTS</div></a>
+        <a href="Events/Events.php"><div class="navigation">EVENTS</div></a>
         <a href="Store/store.php"><div class="navigation">STORE</div></a>
-        <a href="ABOUT US/index.html"><div class="navigation">ABOUT US</div></a>
+        <a href="ABOUT US/index.php"><div class="navigation">ABOUT US</div></a>
         <div id="loginIcon" class="login-icon">
             <img src="MEDIA/login_icon.png" id="loginIcon" alt="Login Icon" width="40" height="auto" />
         </div>
@@ -34,17 +34,21 @@
             </p>
             <button type="submit">Login</button>
         </form>
+        <button class="close-button">Close</button>
     </div>
 
     <div class="container" id="registerContainer">
         <h2>Register</h2>
-        <form id="registerForm" action="register.php" method="post">
+        <form id="registerForm" action="registre.php" method="post">
             <input type="text" name="username" placeholder="Username" required />
+            <input type="text" name="email" placeholder="email" required />
             <input type="password" name="password" placeholder="Password" required />
             <input type="password" name="confirm_password" placeholder="Confirm Password" required />
             <button type="submit">Register</button>
         </form>
+        <button class="close-button">Close</button>
     </div>
+
 
 
     <div class="timer" style="border-bottom: 5px solid rgba(255, 255, 255, 0.5);">
@@ -53,7 +57,7 @@
     </div>
 
     <div style="width: 400px; height: 60px">
-        <a href="DONATE/StoreForm.php">
+        <a href="DONATE/donate.php">
             <h1 class="donatebtn">DONATE NOW!</h1>
         </a>
     </div>

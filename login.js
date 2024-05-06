@@ -3,6 +3,8 @@ document.getElementById('loginIcon').addEventListener('click', function() {
     loginContainer.classList.toggle('active');
 });
 
+
+console.log("hsdjfhsjdf");
 document.getElementById('showRegister').addEventListener('click', function(e) {
     e.preventDefault();
     var registerContainer = document.getElementById('registerContainer');
@@ -10,3 +12,8 @@ document.getElementById('showRegister').addEventListener('click', function(e) {
     var loginContainer = document.getElementById('loginContainer');
     loginContainer.classList.remove('active');
 }); 
+
+function closeContainer(containerId) {
+    var container = document.getElementById(containerId);
+    container.style.display = "none";
+}

@@ -23,10 +23,10 @@
       <div style="width: 50%">
         Croissant Rouge Tunisien Comité Local Manouba
       </div>
-      <a href="../index.html"><div class="navigation">HOME</div></a>
-      <a href="../Events/Events.html"><div class="navigation">EVENTS</div></a>
-      <a href="../DONATE/StoreForm.php"><div class="navigation">STORE</div></a>
-      <a><div class="navigation">ABOUT US</div></a>
+      <a href="../index.php"><div class="navigation">HOME</div></a>
+      <a href="../Events/Events.php"><div class="navigation">EVENTS</div></a>
+      <a href="../Store/store.php"><div class="navigation">STORE</div></a>
+      <a href=""><div class="navigation">ABOUT US</div></a>
     </div>
 
     <div
@@ -150,7 +150,7 @@
           style="box-shadow: 0px 10px 50px black"
         >
           <source
-            src="/ABOUT US/Media/أصحــاَبُ الأرض ❤️🇵🇸...mp4"
+            src="Media/أصحــاَبُ الأرض ❤️🇵🇸...mp4"
             type="video/mp4"
           />
         </video>
@@ -190,7 +190,7 @@
     </div>
 
     <a
-      href="index.html#up "
+      href="index.php#up "
       style="
         position: fixed;
         background-origin: 10px;
