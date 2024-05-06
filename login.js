@@ -12,8 +12,15 @@ document.getElementById('showRegister').addEventListener('click', function(e) {
     var loginContainer = document.getElementById('loginContainer');
     loginContainer.classList.remove('active');
 }); 
+function closeContainer1(){
+    var container = document.getElementById('loginContainer');
+    container.style.display = "none";
 
-function closeContainer(containerId) {
-    var container = document.getElementById(containerId);
+}
+function closeContainer2() {
+    var container = document.getElementById('registerContainer');
     container.style.display = "none";
 }
+
+
+

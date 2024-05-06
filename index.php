@@ -34,7 +34,7 @@
             </p>
             <button type="submit">Login</button>
         </form>
-        <button class="close-button">Close</button>
+        <button onclick="closeContainer1()" class="close-button">Close</button>
     </div>
 
     <div class="container" id="registerContainer">
@@ -46,7 +46,7 @@
             <input type="password" name="confirm_password" placeholder="Confirm Password" required />
             <button type="submit">Register</button>
         </form>
-        <button class="close-button">Close</button>
+        <button onclick="closeContainer2()" class="close-button">Close</button>
     </div>
 
 

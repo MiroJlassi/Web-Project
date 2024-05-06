@@ -205,6 +205,7 @@
         justify-content: center;
         align-items: center;
         font-size: 150%;
+        bottom: 10px;
       "
       >↑</a
     >
