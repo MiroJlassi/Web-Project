@@ -22,7 +22,7 @@
     if (mysqli_query($conn, $sql)) {
         echo "<script>
                 var username = '$name';
-                alert(username + 'is well registered in our DATABASE 🥰;');
+                alert(username + ' is well registered in our DATABASE 🥰;');
                 window.location.href = 'index.php';
               </script>";
     } else {

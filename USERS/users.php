@@ -14,11 +14,13 @@
 
     if(isset($_POST['remove_user'])) {
         $user_id = $_POST['user_id'];
-        $sql_remove_user = "DELETE FROM users WHERE id = $user_id";
-        mysqli_query($conn, $sql_remove_user);
+        if ($user_id != 1) { 
+            $sql_remove_user = "DELETE FROM users WHERE id = $user_id";
+            mysqli_query($conn, $sql_remove_user);
+        }
     }
 
-    $sql_items = "SELECT id, username, email, password FROM users";
+    $sql_items = "SELECT id, username, email, password FROM users WHERE id != 12";
     $result_items = mysqli_query($conn, $sql_items);
     mysqli_close($conn);
 ?>
@@ -32,10 +34,8 @@
     <link rel="stylesheet" href="styles.css">
     <title>Dashboard USERS</title>
 
-
-
     <style>
-
+      
         button {
             padding: 8px 16px;
             border: none;
