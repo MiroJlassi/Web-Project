@@ -2,7 +2,8 @@
 let SpecificDay = new Date("2023-10-07");
 let CurrentDay = new Date();
 let diff = Math.floor((CurrentDay - SpecificDay) / (1000 * 60 * 60 * 24));
-document.getElementById("nbDays").textContent = "It's been " + diff + " days! since the 7th of OCTOBER";
+let strr = "It's been " + diff + " days! since the 7th of OCTOBER"
+document.getElementById("nbDays").textContent = strr + ".";
 
 console.log(diff)
 
