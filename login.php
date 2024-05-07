@@ -10,32 +10,33 @@ if (!$conn) {
     die("CONNECTION FAILED: " . mysqli_connect_error());
 }
 
-$username = $_POST['username'];
-$password = $_POST['password'];
+$username = mysqli_real_escape_string($conn, $_POST['username']); 
+$password = mysqli_real_escape_string($conn, $_POST['password']);
 
 $sql = "SELECT * FROM users WHERE username = '$username' AND password = '$password'";
-$sql_admin = "SELECT * FROM users WHERE username = 'admin' AND password = 'admin'";
-
 $result = mysqli_query($conn, $sql);
-$result_admin = mysqli_query($conn, $sql_admin);
 
-if (mysqli_num_rows($result_admin) > 0) {
-    echo "<script>
+if (mysqli_num_rows($result) > 0) {
+    $user = mysqli_fetch_assoc($result);
+    if ($user['username'] === 'admin' && $user['password'] === 'admin') {
+        // Admin login
+        echo "<script>
             var username = '$username';
             alert('You are logged in successfully as admin, ' + username + '!');
             window.location.href = 'USERS/users.php';
-          </script>";
-    exit();
-}
-
-if (mysqli_num_rows($result) > 0) {
-    echo "<script>
+            </script>";
+        exit();
+    } else {
+        // Regular user login
+        echo "<script>
             var username = '$username';
             alert('You are logged in successfully, ' + username + '!');
             window.location.href = 'index.php';
-          </script>";
-    exit();
+            </script>";
+        exit();
+    }
 } else {
+    // Invalid username or password
     echo "<script>
             alert('Invalid username or password. Please try again.');
             window.location.href = 'index.php';
@@ -44,3 +45,4 @@ if (mysqli_num_rows($result) > 0) {
 }
 
 mysqli_close($conn);
+?>

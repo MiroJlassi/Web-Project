@@ -1,33 +1,36 @@
 <?php
-    $db_server = "localhost";
-    $db_user = "root";
-    $db_pass = "";
-    $db_name = "projet";
-    $conn = mysqli_connect($db_server, $db_user, $db_pass, $db_name);
+$db_server = "localhost";
+$db_user = "root";
+$db_pass = "";
+$db_name = "projet";
 
-    try{
-        $conn = mysqli_connect($db_server, $db_user,$db_pass,$db_name);
-    }
-    catch(mysqli_sql_exception){
-        echo "CONNECTION FAILED";
-    }
+try {
+    $conn = new PDO("mysql:host=$db_server;dbname=$db_name", $db_user, $db_pass);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch(PDOException $e) {
+    echo "CONNECTION FAILED: " . $e->getMessage();
+}
 
-    $name=$_POST['username'];
-    $email = $_POST['email'];
-    $pass = $_POST['password'];
+$name = $_POST['username'];
+$email = $_POST['email'];
+$pass = $_POST['password'];
 
-    $sql = "INSERT INTO users (username,email, password)
-    VALUES ('$name','$email', '$pass')";
+$sql = "INSERT INTO users (username, email, password) VALUES (:name, :email, :pass)";
+$stmt = $conn->prepare($sql);
+$stmt->bindParam(':name', $name);
+$stmt->bindParam(':email', $email);
+$stmt->bindParam(':pass', $pass);
 
-    if (mysqli_query($conn, $sql)) {
-        echo "<script>
-                var username = '$name';
-                alert(username + ' is well registered in our DATABASE 🥰;');
-                window.location.href = 'index.php';
-              </script>";
-    } else {
-        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-    }
+try {
+    $stmt->execute();
+    echo "<script>
+            var username = '$name';
+            alert(username + 'is well registered in our DATABASE 🥰;');
+            window.location.href = 'index.php';
+          </script>";
+} catch(PDOException $e) {
+    echo "Error: " . $e->getMessage();
+}
 
-    mysqli_close($conn);
+$conn = null;
 ?>
