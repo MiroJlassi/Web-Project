@@ -156,6 +156,11 @@
         </video>
       </div>
     </div>
+
+    <h1>Development TEAM</h1>
+    <div class="team-container"></div>
+    <script src="Team.js"></script>
+
     <div
       style="
         width: 70%;
@@ -209,6 +214,9 @@
       "
       >↑</a
     >
+
+
+
     <script src="script.js"></script>
   </body>
 

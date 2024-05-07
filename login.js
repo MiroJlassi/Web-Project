@@ -4,7 +4,6 @@ document.getElementById('loginIcon').addEventListener('click', function() {
 });
 
 
-console.log("hsdjfhsjdf");
 document.getElementById('showRegister').addEventListener('click', function(e) {
     e.preventDefault();
     var registerContainer = document.getElementById('registerContainer');

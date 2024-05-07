@@ -20,8 +20,11 @@
     VALUES ('$name','$email', '$pass')";
 
     if (mysqli_query($conn, $sql)) {
-        header("Location: index.php");
-        exit();
+        echo "<script>
+                var username = '$name';
+                alert(username + 'is well registered in our DATABASE 🥰;');
+                window.location.href = 'index.php';
+              </script>";
     } else {
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }

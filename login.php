@@ -22,12 +22,16 @@
     if (mysqli_num_rows($result) > 0) {
         echo "<script>
                 var username = '$username';
-                alert('Welcome Again 🤗'+ username);
-                window.location.href = 'index.php'; // Redirect after OK button is clicked
+                alert('You are Logged in successfully !! Welcome Again 🤗'+ username);
+                window.location.href = 'index.php';
               </script>";
         exit();
     } else {
-        echo "Invalid username or password";
+        echo "<script>
+        alert('Invalid UserName Or Password 😭');
+        window.location.href = 'index.php';
+        </script>";
+        exit();
     }
 
     mysqli_close($conn);
